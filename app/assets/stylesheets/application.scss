@@ -1,2 +1,18 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.img-circle avatar-small {
+    width: 28px;
+}
+
+.img-circle avatar-medium {
+    width: 48px;
+}
+
+.img-circle avatar-large {
+    width: 68px;
+}
+
+.img-circle avatar-full {
+    width: 100%;
+}
