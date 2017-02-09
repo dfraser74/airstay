@@ -1,18 +1,19 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "toastr"
 
-.img-circle avatar-small {
+.avatar-small {
     width: 28px;
 }
 
-.img-circle avatar-medium {
+.avatar-medium {
     width: 48px;
 }
 
-.img-circle avatar-large {
+.avatar-large {
     width: 68px;
 }
 
-.img-circle avatar-full {
+.avatar-full {
     width: 100%;
 }
