@@ -273,5 +273,9 @@ Devise.setup do |config|
   # config.omniauth_path_prefix = '/my_engine/users/auth'
   
   # OmniAuth config
-  config.omniauth :facebook, ENV["FACEBOK_APP_ID"], ENV["FACEBOK_APP_SECRET"], scope: 'email', info_fields: 'email'
+  config.omniauth :facebook, ENV["FACEBOOK_APP_ID"], ENV["FACEBOOK_APP_SECRET"], 
+    callback_url: "https://airstay-shaunthornburgh.c9users.io/auth/facebook/callback",
+    scope: 'email', 
+    info_fields: 'name,email',
+    display: 'popup'
 end
