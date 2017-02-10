@@ -3,9 +3,11 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
-         :confirmable, :omniauthable, :omniauth_providers => [:facebook]
+         :confirmable, :omniauthable, :omniauth_providers => [:facebook, :google_oauth2]
          
   validates :fullname, presence: true, length: { maximum: 50 }
+  
+  has_many :rooms
   
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
