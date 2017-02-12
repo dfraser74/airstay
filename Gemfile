@@ -15,6 +15,8 @@ gem 'toastr-rails'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem "omniauth-google-oauth2"
+gem 'font-awesome-sass'
+gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"
 
 group :development, :test do
   gem 'byebug'
