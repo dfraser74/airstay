@@ -128,6 +128,46 @@
 			</div>
 		</div>
 
+		<br>
+		<hr>
+
+		<!-- Google Map -->
+		<div class="row">
+			<div class="col-md-12">
+				
+        
+        
+        <style>
+          #map {
+          width: 100%;
+          height: 400px;
+          }
+        </style>
+        
+        <div id="map"></div>
+        
+        <script>
+          function initMap() {
+            var uluru = {lat: <%= @room.latitude %>, lng: <%= @room.longitude %>};
+            var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 15,
+            center: uluru
+          });
+          var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+            });
+          }
+        </script>
+        
+        <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADb2Q4vpA_CnlI-Tth1Jss1SUA12oP0Ug&callback=initMap">
+        </script>
+
+
+			</div>
+		</div>
+
 
 	</div>
 </div>
