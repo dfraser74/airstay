@@ -21,9 +21,15 @@ class ReservationsController < ApplicationController
 	end
   
   def create
-    @reservation = current_user.reservations.create(reservations_params)
+    room = Room.find(params[:room_id])
+    if current_user == room.user
+      redirect_to room, notice: "You can't reserve your own room!"
+    else
+      @reservation = current_user.reservations.create(reservations_params)
+      redirect_to @reservation.room, notice: "Your reservation has been created"
+    end
     
-    redirect_to @reservation.room, notice: "Your reservation has been created"
+    
   end
   
   def your_trips
