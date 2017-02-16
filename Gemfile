@@ -18,6 +18,7 @@ gem "omniauth-google-oauth2"
 gem 'font-awesome-sass'
 gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"
 gem 'geocoder'
+gem 'jquery-ui-rails'
 
 group :development, :test do
   gem 'byebug'
