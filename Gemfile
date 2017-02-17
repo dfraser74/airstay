@@ -19,6 +19,8 @@ gem 'font-awesome-sass'
 gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"
 gem 'geocoder'
 gem 'jquery-ui-rails'
+gem 'private_pub'
+gem 'thin'
 
 group :development, :test do
   gem 'byebug'
