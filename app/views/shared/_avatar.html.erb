@@ -1,9 +1,7 @@
 <% if user.image %>
   <%= image_tag user.image, class: style %>
 <% else %>
-  <div class="avatar-circle">
-    <span class="initials">
-      <%= initials_of user %>
-    </span>
+  <div class="initials <%= style %>">
+    <%= initials_of user %>
   </div>
 <% end %>
